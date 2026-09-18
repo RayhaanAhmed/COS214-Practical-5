@@ -1,7 +1,7 @@
 #ifndef SIREN_TOWER_ADAPTER_H
 #define SIREN_TOWER_ADAPTER_H
 #include "AlertChannel.h"
-class SirenTower;
+#include "SirenTower.h"
 
 // Object Adapter: translates AlertChannel::send(message) into
 // SirenTower::soundSiren(zoneCode, durationSecs). Composition, not
