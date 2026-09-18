@@ -2,14 +2,16 @@
 #define ACTIVATE_ALERT_COMMAND_H
 #include "Command.h"
 #include <string>
-class AlertChannel;
+using namespace std;
+
+#include "AlertChannel.h";
 
 class ActivateAlertCommand : public Command {
 private:
-    AlertChannel* receiver; // non-owning
-    std::string message;
+    AlertChannel* receiver; //non-owning
+    string message;
 public:
-    ActivateAlertCommand(AlertChannel* r, const std::string& m);
+    ActivateAlertCommand(AlertChannel* r, const string& m);
     void execute();
     void undo();
 };

@@ -1,7 +1,7 @@
 #ifndef RESPONSE_COMPONENT_H
 #define RESPONSE_COMPONENT_H
 #include <string>
-class IncidentMediator;
+#include "IncidentMediator.h"
 
 // Colleague (Mediator pattern)
 class ResponseComponent {
