@@ -1,0 +1,51 @@
+#include "Incident.h"
+#include "IncidentState.h"
+
+Incident::Incident(const std::string& id_, const std::string& type_, const std::string& location_, int severity_)
+{
+    id = id_;
+    type = type_;
+    location = location_;
+    severity = severity_;
+    state = std::make_unique<ReportedState>();
+}
+
+void Incident::setState(std::unique_ptr<IncidentState> newState)
+{
+    state = std::move(newState);
+}
+
+void Incident::advance()
+{
+    state->handle(this);
+}
+
+bool Incident::canCancel() const
+{
+    return state->canCancel();
+}
+
+std::string Incident::getStatusName() const
+{
+    return state->name();
+}
+
+std::string Incident::getLocation() const
+{
+    return location;
+}
+
+std::string Incident::getType() const
+{
+    return type;
+}
+
+std::string Incident::getId() const
+{
+    return id;
+}
+
+int Incident::getSeverity() const
+{
+    return severity;
+}
