@@ -1,10 +1,11 @@
 #include "ReportedState.h"
 #include "Incident.h"
+#include "DispatchedState.h"
 
 void ReportedState::handle(Incident* incident)
 {
     std::cout << "Handling reported incident: " << incident->getId() << std::endl;
-    incident->setState(std::make_unique<DispatchedState>());
+    incident->setState(std::unique_ptr<IncidentState>(new DispatchedState()));
 }
 
 bool ReportedState::canCancel() const
