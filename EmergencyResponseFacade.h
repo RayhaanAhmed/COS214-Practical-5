@@ -10,12 +10,11 @@
 
 class EmergencyResponseFacade {
 private:
-    OperatorConsole* console;         // non-owning
-    AccessControlSystem* access;      // non-owning
-    AlertChannel* alertChannel;       // non-owning
+    OperatorConsole* console;
+    AccessControlSystem* access;
+    AlertChannel* alertChannel;
 public:
     EmergencyResponseFacade(OperatorConsole* c, AccessControlSystem* a, AlertChannel* al);
-
     // Coordinates >= 3 subsystem operations: dispatch, lockdown, alert - plus State transitions.
     // "type" is not branched on here (no switch/if-chain) - it is just data carried by Incident.
     void reportEmergency(Incident* incident, DispatchOrder* order, const std::string& alertMessage);
