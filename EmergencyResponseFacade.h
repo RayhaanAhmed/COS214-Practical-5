@@ -1,12 +1,12 @@
 #ifndef EMERGENCY_RESPONSE_FACADE_H
 #define EMERGENCY_RESPONSE_FACADE_H
-#include <memory>
+
 #include <string>
-class OperatorConsole;
-class AccessControlSystem;
-class AlertChannel;
-class Incident;
-class DispatchOrder;
+#include "Incident.h"
+#include "OperatorConsole.h"
+#include "AccessControlSystem.h"
+#include "AlertChannel.h"
+#include "DispatchOrder.h"
 
 class EmergencyResponseFacade {
 private:
@@ -18,6 +18,6 @@ public:
 
     // Coordinates >= 3 subsystem operations: dispatch, lockdown, alert - plus State transitions.
     // "type" is not branched on here (no switch/if-chain) - it is just data carried by Incident.
-    void reportEmergency(Incident* incident, std::unique_ptr<DispatchOrder> order, const std::string& alertMessage);
+    void reportEmergency(Incident* incident, DispatchOrder* order, const std::string& alertMessage);
 };
 #endif
