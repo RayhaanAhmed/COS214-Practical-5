@@ -5,7 +5,7 @@
 class InProgressState : public IncidentState {
 public:
     void handle(Incident* incident);
-    bool canCancel() const { return true; }
+    bool canCancel() const { return false; }
     std::string name() const { return "InProgress"; }
 };
 #endif

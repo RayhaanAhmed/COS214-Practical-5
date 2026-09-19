@@ -1,6 +1,7 @@
 #ifndef INCIDENT_H
 #define INCIDENT_H
 #include <memory>
+#include <iostream>
 #include <string>
 #include "IncidentState.h"
 

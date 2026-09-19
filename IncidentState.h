@@ -1,6 +1,14 @@
 #ifndef INCIDENT_STATE_H
 #define INCIDENT_STATE_H
+
 #include <string>
+
+#include "DispatchedState.h"
+#include "InProgressState.h"
+#include "ReportedState.h"
+#include "EscalatedState.h"
+#include "ResolvedState.h"
+
 class Incident;
 
 class IncidentState {
