@@ -3,19 +3,14 @@
 
 #include <string>
 
-#include "DispatchedState.h"
-#include "InProgressState.h"
-#include "ReportedState.h"
-#include "EscalatedState.h"
-#include "ResolvedState.h"
-
 class Incident;
 
+// State (abstract) - State pattern
 class IncidentState {
 public:
     virtual void handle(Incident* incident) = 0;
     virtual bool canCancel() const = 0;
     virtual std::string name() const = 0;
-    virtual ~IncidentState() {}
+    virtual ~IncidentState();
 };
 #endif

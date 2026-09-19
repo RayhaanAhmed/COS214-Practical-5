@@ -5,7 +5,7 @@
 class ResolvedState : public IncidentState {
 public:
     void handle(Incident* incident); // no-op: terminal state
-    bool canCancel() const { return false; } // rule: cannot cancel a resolved incident
-    std::string name() const { return "Resolved"; }
+    bool canCancel() const;// rule: cannot cancel a resolved incident
+    std::string name() const;
 };
 #endif

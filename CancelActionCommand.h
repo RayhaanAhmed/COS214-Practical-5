@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-#include "Incident.h";
+#include "Incident.h"
 
 class CancelActionCommand : public Command {
 private:

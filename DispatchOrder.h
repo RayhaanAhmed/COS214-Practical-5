@@ -8,6 +8,6 @@ class DispatchOrder {
 public:
     virtual void dispatch(Incident* incident) = 0;
     virtual std::string getBriefing() const = 0;
-    virtual ~DispatchOrder() {}
+    virtual ~DispatchOrder();
 };
 #endif

@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-#include "AlertChannel.h";
+#include "AlertChannel.h"
 
 class ActivateAlertCommand : public Command {
 private:
