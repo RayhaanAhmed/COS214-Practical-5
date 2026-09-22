@@ -1,5 +1,6 @@
 #include "Incident.h"
 #include "IncidentState.h"
+#include "ReportedState.h"
 
 Incident::Incident(const std::string& id_, const std::string& type_, const std::string& location_, int severity_)
 {
@@ -7,7 +8,7 @@ Incident::Incident(const std::string& id_, const std::string& type_, const std::
     type = type_;
     location = location_;
     severity = severity_;
-    state = std::make_unique<ReportedState>();
+    state = std::unique_ptr<IncidentState>(new ReportedState());
 }
 
 void Incident::setState(std::unique_ptr<IncidentState> newState)
