@@ -5,7 +5,7 @@
 class DispatchedState : public IncidentState {
 public:
     void handle(Incident* incident);
-    bool canCancel() const { return true; }
-    std::string name() const { return "Dispatched"; }
+    bool canCancel() const;
+    std::string name() const;
 };
 #endif

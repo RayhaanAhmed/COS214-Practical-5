@@ -19,9 +19,9 @@ public:
     void advance(); // delegates to state->handle(this)
     bool canCancel() const;
     std::string getStatusName() const;
-    std::string getLocation() const { return location; }
-    std::string getType() const { return type; }
-    std::string getId() const { return id; }
-    int getSeverity() const { return severity; }
+    std::string getLocation() const;
+    std::string getType() const;
+    std::string getId() const;
+    int getSeverity() const;
 };
 #endif

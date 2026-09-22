@@ -1,7 +1,7 @@
 #ifndef SECURITY_TEAM_H
 #define SECURITY_TEAM_H
 #include "ResponseComponent.h"
-class Incident;
+#include "Incident.h"
 
 class SecurityTeam : public ResponseComponent {
 public:

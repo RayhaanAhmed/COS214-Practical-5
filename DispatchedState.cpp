@@ -8,3 +8,13 @@ void DispatchedState::handle(Incident* incident)
     std::cout << "Handling dispatched incident: " << incidentId << std::endl;
     incident->setState(std::unique_ptr<IncidentState>(new InProgressState()));
 }
+
+bool DispatchedState::canCancel() const
+{
+    return true;
+}
+
+std::string DispatchedState::name() const
+{
+    return "Dispatched";
+}

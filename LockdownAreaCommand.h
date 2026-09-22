@@ -2,7 +2,7 @@
 #define LOCKDOWN_AREA_COMMAND_H
 #include "Command.h"
 #include <string>
-class AccessControlSystem;
+#include "AccessControlSystem.h"
 
 class LockdownAreaCommand : public Command {
 private:

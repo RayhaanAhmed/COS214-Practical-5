@@ -1,10 +1,10 @@
 #ifndef INCIDENT_COORDINATOR_H
 #define INCIDENT_COORDINATOR_H
 #include "IncidentMediator.h"
-class SecurityTeam;
-class MedicalTeam;
-class FacilitiesTeam;
-class AccessControlSystem;
+#include "SecurityTeam.h"
+#include "MedicalTeam.h"
+#include "FacilitiesTeam.h"
+#include "AccessControlSystem.h"
 
 class IncidentCoordinator : public IncidentMediator {
 private:
