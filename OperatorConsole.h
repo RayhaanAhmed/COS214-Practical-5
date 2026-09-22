@@ -11,6 +11,6 @@ private:
 public:
 
     Command* submit(Command* cmd); //executes, keeps for possible cancel/undo
-    ~OperatorConsole();
+    virtual ~OperatorConsole();
 };
 #endif

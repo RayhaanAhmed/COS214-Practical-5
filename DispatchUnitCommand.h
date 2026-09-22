@@ -13,6 +13,6 @@ public:
     DispatchUnitCommand(DispatchOrder* o, Incident* inc);
     void execute();
     void undo();
-    ~DispatchUnitCommand();
+    virtual ~DispatchUnitCommand();
 };
 #endif

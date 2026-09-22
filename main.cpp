@@ -108,8 +108,7 @@ int main() {
     std::cout << "\nMedical unit requests backup through the mediator" << std::endl;
     mediator.requestBackup(&medical, &medEmergency);
 
-    std::cout << "\nFinal status: " << fire.getId() << " = " << fire.getStatusName() << ", "
-              << medEmergency.getId() << " = " << medEmergency.getStatusName() << std::endl;
+    std::cout << "\nFinal status: " << fire.getId() << " = " << fire.getStatusName() << ", "<< medEmergency.getId() << " = " << medEmergency.getStatusName() << std::endl;
     std::cout << "\nCampusGuard shutdown complete." << std::endl;
     return 0;
 }
