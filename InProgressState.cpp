@@ -5,7 +5,7 @@
 void InProgressState::handle(Incident* incident)
 {
     std::cout << "Handling in-progress incident: " << incident->getId() << std::endl;
-    incident->setState(std::make_unique<EscalatedState>());
+    incident->setState(std::unique_ptr<IncidentState>(new EscalatedState()));
 }
 
 bool InProgressState::canCancel() const
