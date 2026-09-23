@@ -1,0 +1,8 @@
+services:
+  campusguard:
+    build: .
+    image: campusguard
+    container_name: campusguard
+    # needed so gdb can attach when you run the debugging session inside the container
+    cap_add:
+      - SYS_PTRACE
